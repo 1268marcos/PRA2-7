@@ -1,0 +1,73 @@
+package com.example.known;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity (tableName = "knowns")
+public class Knowns {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "KnownsId")
+    private int mId;
+
+    @NonNull
+    @ColumnInfo(name = "KnownsCreationDate")
+    private String mCreationDate;
+
+    @Nullable
+    @ColumnInfo(name = "KnownsName")
+    private String mName;
+
+    @Nullable
+    @ColumnInfo(name = "KnownsLocation")
+    private String mLocation;
+
+    @Nullable
+    @ColumnInfo(name = "KnownsScore")
+    private int mScore;
+
+
+
+
+    public int getId() {
+        return mId;
+    }
+    public void setId(@NonNull int id) {
+        mId = id;
+    }
+    public String getCreationDateCreationDate() {
+        return mCreationDate;
+    }
+    public void setCreationDate(@NonNull String creationDate) {
+        mCreationDate = creationDate;
+    }
+    public String getName() {
+        return mName;
+    }
+    public void setName(String name) {
+        mName = name;
+    }
+    public String getLocation() {
+        return mLocation;
+    }
+    public void setLocation(String location) {
+        mLocation = location;
+    }
+
+    public int getScore() {
+        return mScore;
+    }
+    public void setScore(int score) {
+        mScore = score;
+    }
+
+    public Knowns(String mName, String mLocation, int mScore, @NonNull String mCreationDate) {
+        this.mName = mName;
+        this.mLocation = mLocation;
+        this.mScore = mScore;
+        this.mCreationDate = mCreationDate;
+}
+}
