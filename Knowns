@@ -7,7 +7,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity (tableName = "knowns")
-public class Knowns {
+public class Known {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "KnownsId")
@@ -64,7 +64,7 @@ public class Knowns {
         mScore = score;
     }
 
-    public Knowns(String mName, String mLocation, int mScore, @NonNull String mCreationDate) {
+    public Known(String mName, String mLocation, int mScore, @NonNull String mCreationDate) {
         this.mName = mName;
         this.mLocation = mLocation;
         this.mScore = mScore;
